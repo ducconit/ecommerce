@@ -1,0 +1,28 @@
+{
+    "name": "dnt/ecommerce",
+    "type": "module",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "DNT\\Ecommerce\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ducnt",
+            "email": "ducconit@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.3|^8.0",
+        "laravel/framework": "^8.65"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DNT\\Ecommerce\\Providers\\EcommerceServiceProvider"
+            ]
+        }
+    }
+}
