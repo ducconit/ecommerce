@@ -16,7 +16,8 @@
     "minimum-stability": "dev",
     "require": {
         "php": "^7.3|^8.0",
-        "laravel/framework": "^8.65"
+        "laravel/framework": "^8.65",
+        "dnt/dashboard": "dev-master"
     },
     "extra": {
         "laravel": {
@@ -24,5 +25,11 @@
                 "DNT\\Ecommerce\\Providers\\EcommerceServiceProvider"
             ]
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/ducconit/dashboard"
+        }
+    ]
 }
