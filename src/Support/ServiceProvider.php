@@ -27,6 +27,16 @@ abstract class ServiceProvider extends BaseService
 
 	}
 
+	protected function loadTranslationsFrom($path, $namespace)
+	{
+		$this->callAfterResolving('translator', function ($translator) use ($path, $namespace) {
+			$translator->addNamespace($namespace, $path);
+			if ($this->app->make('files')->exists($path)) {
+				$translator->addJsonPath($path);
+			}
+		});
+	}
+
 	/**
 	 * Cài đặt các gói cấu hình mặc định
 	 */
