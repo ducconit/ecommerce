@@ -33,7 +33,7 @@ abstract class ServiceProvider extends BaseService
 	public function configuration()
 	{
 		$this->loadConfig($this->configPaths(), 'mergeConfigFrom');
-		$this->loadConfig($this->viewPaths(), 'loadViewFrom');
+		$this->loadConfig($this->viewPaths(), 'loadViewsFrom');
 	}
 
 	protected function loadConfig($data, $method)
